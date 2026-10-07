@@ -1,28 +1,17 @@
 const express = require("express");
 const path = require("path");
+
 const app = express();
 
-// ========================================
-// CONFIGURAÇÃO DO EJS
-// ========================================
+// Configuração do EJS
 app.set("view engine", "ejs");
-app.set(
-    "views",
-    path.join(__dirname, "views")
-);
+app.set("views", path.join(__dirname, "views"));
 
-// ========================================
-// MIDDLEWARES
-// ========================================
-// Permite receber dados enviados por formulário
+// Middlewares
 app.use(express.urlencoded({ extended: true }));
-
-// Permite receber requisições com JSON
 app.use(express.json());
 
-// ========================================
-// ROTAS
-// ========================================
+// Rotas
 const categoriaRoutes = require("./routes/categoriaRoutes");
 app.use("/categorias", categoriaRoutes);
 
@@ -35,21 +24,14 @@ app.use("/cliente", clienteRoutes);
 const fornecedorRoutes = require("./routes/fornecedorRoutes");
 app.use("/fornecedor", fornecedorRoutes);
 
-
-// ========================================
-// ROTA PRINCIPAL
-// ========================================
+// Rota principal
 app.get("/", (req, res) => {
     res.render("index");
 });
 
-// ========================================
-// SERVIDOR
-// ========================================
-app.listen(3000, () => {
+// Servidor compatível com o Render
+const PORT = process.env.PORT || 3000;
 
-    console.log(
-        "Servidor rodando em http://localhost:3000"
-    );
-
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
 });

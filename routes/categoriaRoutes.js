@@ -63,7 +63,21 @@ router.get("/excluir/:id", (req, res) => {
   });
 
   //editar efetiva - Post
-  
+  router.post("/editar/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const { nome, descricao } = req.body;
+
+  const categoria = categorias.find(c => c.id === id);
+
+  if (!categoria) {
+    return res.redirect("/categorias");
+  }
+
+  categoria.nome = nome;
+  categoria.descricao = descricao;
+
+  res.redirect("/categorias");
+});
 
 module.exports = router;
 

@@ -1,0 +1,61 @@
+<%- include("../partials/header") %>
+    <%- include("../partials/nav") %>
+        <div class="container mt-5">
+            <div class="d-flex justify-content-between
+                align-items-center mb-4">
+                <div>
+                    <h1>Categorias</h1>
+                    <p class="text-muted">
+                        Lista de categorias cadastradas
+                    </p>
+                </div>
+                <a href="/categorias/cadastro" class="btn btn-primary">
+                    + Nova Categoria
+                </a>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover
+                              align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>Descrição</th>
+                                    <th>Opções</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% categorias.forEach(mostrar=> { %>
+                                    <tr>
+                                        <td>
+                                            <%= mostrar.id %>
+                                        </td>
+                                        <td>
+                                            <%= mostrar.nome %>
+                                        </td>
+                                        <td>
+                                            <%= mostrar.descricao %>
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-danger btn-sm"
+                                                href="/categorias/excluir/<%= mostrar.id%>"
+                                                onclick="return confirm('Deseja excluir essa categoria?')">Excluir</a>
+
+                                            <a class="btn btn-success btn-sm"
+                                                href="/categorias/editar/<%= mostrar.id%>">
+                                                Editar
+                                            </a>
+
+                                        </td> 
+                                    </tr>
+                                    <% }) %>+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include("../partials/footer")%>

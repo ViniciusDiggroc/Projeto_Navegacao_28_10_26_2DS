@@ -92,6 +92,9 @@ Copilot, arrume todos os bugs que existem dentro deste projeto, deixe o estilo d
 
 ## Prints da Conversa com a IA
 
+<img src="./imagem.png" alt="">
+<img src="./imagem.png(1)" alt="">
+<img src="./imagem.png(2)" alt="">
 
 **Antes da reestilização:**
 

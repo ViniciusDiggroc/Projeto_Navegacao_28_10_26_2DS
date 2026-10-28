@@ -105,7 +105,10 @@ Copilot, arrume todos os bugs que existem dentro deste projeto, deixe o estilo d
 
 **Depois da reestilização:**
 
-*Adicione aqui a imagem da interface depois das alterações.*
+<img src="./depois.png" alt=""  width= "500" style="border-radius: 10px; border: 2px solid #b3d9f2;" >
+<img src="./depois 2.png" alt=""  width= "500" style="border-radius: 10px; border: 2px solid #b3d9f2;" >
+<img src="./depois 3.png" alt=""  width= "500" style="border-radius: 10px; border: 2px solid #b3d9f2;" >
+<img src="./depois 4.png" alt=""  width= "500" style="border-radius: 10px; border: 2px solid #b3d9f2;" >
 
 ---
 

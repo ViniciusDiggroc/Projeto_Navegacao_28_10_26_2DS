@@ -114,6 +114,6 @@ Copilot, arrume todos os bugs que existem dentro deste projeto, deixe o estilo d
 
 ## Links
 
-**Link da aplicação:** [Adicione o link aqui]
+**Link da aplicação:** https://projeto-navegacao-28-10-26-2ds.onrender.com
 
-**Link do repositório:** [Adicione o link aqui]
+**Link do repositório:** https://github.com/ViniciusDiggroc/Projeto_Navegacao_28_10_26_2DS.git

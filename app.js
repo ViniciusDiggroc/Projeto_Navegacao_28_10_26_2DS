@@ -3,15 +3,14 @@ const path = require("path");
 
 const app = express();
 
-// Configuração do EJS
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-// Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use("/css", express.static(path.join(__dirname, "css")));
+app.use("/js", express.static(path.join(__dirname, "js")));
 
-// Rotas
 const categoriaRoutes = require("./routes/categoriaRoutes");
 app.use("/categorias", categoriaRoutes);
 
@@ -24,14 +23,12 @@ app.use("/cliente", clienteRoutes);
 const fornecedorRoutes = require("./routes/fornecedorRoutes");
 app.use("/fornecedor", fornecedorRoutes);
 
-// Rota principal
 app.get("/", (req, res) => {
-    res.render("index");
+  res.render("index");
 });
 
-// Servidor compatível com o Render
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });

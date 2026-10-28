@@ -1,61 +1,61 @@
 <%- include("../partials/header") %>
-    <%- include("../partials/nav") %>
-        <div class="container mt-5">
-            <div class="d-flex justify-content-between
-                align-items-center mb-4">
-                <div>
-                    <h1>Clientes</h1>
-                    <p class="text-muted">
-                        Lista de clientes cadastrados
-                    </p>
-                </div>
-                <a href="/cliente/cadastro" class="btn btn-primary">
-                    + Novo Cliente
-                </a>
-            </div>
+<%- include("../partials/nav") %>
 
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-hover
-                              align-middle">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Nome</th>
-                                    <th>Descrição</th>
-                                    <th>Opções</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <% clientes.forEach(mostrar=> { %>
-                                    <tr>
-                                        <td>
-                                            <%= mostrar.id %>
-                                        </td>
-                                        <td>
-                                            <%= mostrar.nome %>
-                                        </td>
-                                        <td>
-                                            <%= mostrar.descricao %>
-                                        </td>
-                                        <td>
-                                            <a class="btn btn-danger btn-sm"
-                                                href="/cliente/excluir/<%= mostrar.id%>"
-                                                onclick="return confirm('Deseja excluir esse cliente?')">Excluir</a>
+<main class="container page-shell">
+  <section class="hero-card">
+    <span class="eyebrow">Cadastro</span>
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+      <div>
+        <h1 class="mb-1">Clientes</h1>
+        <p>Lista de clientes cadastrados.</p>
+      </div>
+      <a href="/cliente/cadastro" class="primary-btn">+ Novo cliente</a>
+    </div>
+  </section>
 
-                                            <a class="btn btn-success btn-sm"
-                                                href="/cliente/editar/<%= mostrar.id%>">
-                                                Editar
-                                            </a>
+  <% if (success) { %>
+    <div class="flash-message flash-success"><%= success %></div>
+  <% } %>
 
-                                        </td> 
-                                    </tr>
-                                    <% }) %>+
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <%- include("../partials/footer")%>
+  <% if (error) { %>
+    <div class="flash-message flash-error"><%= error %></div>
+  <% } %>
+
+  <div class="panel-card p-3 p-md-4">
+    <% if (clientes.length === 0) { %>
+      <p class="empty-state">Nenhum cliente cadastrado.</p>
+    <% } else { %>
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Telefone</th>
+              <th style="width: 210px;">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% clientes.forEach((cliente) => { %>
+              <tr>
+                <td><%= cliente.id %></td>
+                <td><%= cliente.nome %></td>
+                <td><%= cliente.email %></td>
+                <td><%= cliente.telefone %></td>
+                <td>
+                  <div class="action-group">
+                    <a class="success-btn" href="/cliente/editar/<%= cliente.id %>">Editar</a>
+                    <a class="danger-btn" href="/cliente/excluir/<%= cliente.id %>" onclick="return confirm('Deseja realmente excluir este cliente?')">Excluir</a>
+                  </div>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    <% } %>
+  </div>
+</main>
+
+<%- include("../partials/footer") %>

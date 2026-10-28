@@ -1,95 +1,110 @@
-** Projeto Navegação - 2DS PW**
 
-Nome do Projeto:Sistema de cadastro
+# Projeto Navegação - 2DS PW
 
-Integrantes:Rafael Piffer e Vinicius Alexandre
+---
 
-Objetivo:Sistemas de cadastro onde você pode codastrar categorias, produtos, clientes e fornecedores dentro de um estabelecimento
+## Informações do Projeto
 
-Tecnologias Utilizadas:CRUD, node.js, Express, Claude e Gemini
+**Nome do projeto:** Sistema de Cadastro
 
-Funcionalidades: possibilita cadastrar, ler, modificar e deletar (CRUD) informações
+**Integrantes:** Rafael Piffer e Vinicius Alexandre
 
-Prompt Utilizado:
-gemini
-estou fazendo um aplicativo de CAdastro
-vou precisar que vocÊ faça a seguinte mudança
-- A nova interface deve apresentar melhorias como:
+**Objetivo:** Desenvolver um sistema de cadastro que permita gerenciar categorias, produtos, clientes e fornecedores de um estabelecimento.
+
+**Tecnologias utilizadas:** Node.js, Express, operações CRUD, Gemini e GitHub Copilot.
+
+**Funcionalidades:** O sistema permite cadastrar, consultar, modificar e excluir informações, seguindo as operações CRUD (*Create, Read, Update e Delete*).
+
+---
+
+## Prompts Utilizados
+
+### 1º Prompt — Gemini
+
+```text
+Estou fazendo um aplicativo de cadastro e vou precisar que você faça a seguinte mudança.
+
+A nova interface deve apresentar melhorias como:
 - Layout mais moderno;
 - Melhor organização dos elementos;
 - Melhor uso de cores;
 - Botões e formulários aprimorados;
 - Melhor experiência para o usuário;
-- Responsividade (quando possível).
+- Responsividade, quando possível.
 
-lembre dessas leis de ouro
-Seja direto ao ponto
-não faça nada no que não foi pedido
-se tiver qualquer possível melhora explique o do porquê antes
-antes de me mandar o projeto final me liste todas as mudanças feitas e me avise que você vai começar a fazer
+Lembre-se destas regras de ouro:
+- Seja direto ao ponto;
+- Não faça nada que não foi pedido;
+- Se houver alguma possível melhoria, explique o motivo antes;
+- Antes de enviar o projeto final, liste todas as mudanças feitas e avise que vai começar a implementá-las.
+```
+
+### Justificativas das Melhorias Sugeridas pela IA
+
+**1. Visual moderno e profissional**
+
+Uso de variáveis CSS, fontes legíveis, cantos arredondados e sombras suaves para deixar a interface mais organizada e agradável.
+
+**2. Melhor organização dos elementos**
+
+Utilização de CSS Grid e Flexbox para alinhar os campos e agrupar informações relacionadas, facilitando o preenchimento dos formulários.
+
+**3. Uso estratégico de cores e feedback visual**
+
+Aplicação de uma paleta de cores harmoniosa, com destaque para ações importantes e indicações visuais nos campos e botões.
+
+**4. Aprimoramento de botões e campos**
+
+Melhoria do espaçamento, da área de interação e dos efeitos visuais dos botões e campos de entrada.
+
+**5. Responsividade**
+
+Uso de media queries para adaptar o layout a diferentes tamanhos de tela, como celulares, tablets e computadores.
+
+### Lista de Mudanças Sugeridas
+
+- Criação de um container centralizado para os formulários.
+- Organização dos campos com CSS Grid e Flexbox.
+- Aprimoramento dos rótulos, campos de entrada e seletores.
+- Inclusão de efeitos de foco nos campos e de interação nos botões.
+- Definição de uma paleta de cores com bom contraste.
+- Adaptação da interface para telas menores.
+
+### 2º Prompt — GitHub Copilot
+
+```text
+Copilot, arrume todos os bugs que existem dentro deste projeto, deixe o estilo de view/index.js igual ao das demais páginas e não acrescente nada além do que foi pedido.
+```
+
+---
+
+## Alterações Implementadas pelo Grupo
+
+- Implementação de tema claro e tema escuro.
+
+---
+
+## Uso da Inteligência Artificial
+
+**Ferramentas utilizadas:** Gemini e GitHub Copilot.
+
+---
+
+## Prints da Conversa com a IA
 
 
-Uso da Inteligência Artificial: sim, usamos gemini e copilot
+**Antes da reestilização:**
 
-Alterações Sugeridas pela IA:
+*Adicione aqui a imagem da interface antes das alterações.*
 
-1º prompt
-Por que estas melhorias foram pensadas (Justificativas)
-Visual Moderno e Profissional (Design System Moderno)
+**Depois da reestilização:**
 
-Por quê: O visual padrão dos formulários legados costuma ser ultrapassado. Utilizar CSS com variáveis, fontes limpas (Inter/Roboto), cantos levemente arredondados (border-radius) e sombras suaves (box-shadow) transmite profissionalismo e confiança ao usuário.
+*Adicione aqui a imagem da interface depois das alterações.*
 
-Melhor Organização dos Elementos (Layout em Grid/Flexbox e Grupos Visualmente Separados)
+---
 
-Por quê: Formulários longos com campos desalinhados causam fadiga visual. A organização em duas ou mais colunas para telas maiores e o agrupamento visual de campos relacionados tornam o preenchimento mais ágil e intuitivo.
+## Links
 
-Uso Estratégico de Cores e Feedback Visual
+**Link da aplicação:** [Adicione o link aqui]
 
-Por quê: Uma paleta de cores harmoniosa (tons neutros para o fundo/textos e uma cor de destaque como azul/índigo para ações primárias) direciona a atenção do usuário. O destaque no campo focado (:focus) e mensagens claras para sucesso/erro evitam equívocos no preenchimento.
-
-Aprimoramento de Botões e Inputs
-
-Por quê: Inputs maiores com espaçamento interno adequado facilitam o clique e a digitação. Botões com estados de interatividade (efeito hover e active) dão um retorno imediato para a ação do usuário.
-
-Responsividade Completa (Mobile-First / Media Queries)
-
-Por quê: A interface precisa funcionar adequadamente tanto em telas de dispositivos móveis quanto em monitores desktop, reajustando colunas e tamanhos automaticamente.
-
-Lista de Mudanças a Serem Executadas
-Estrutura Visual / Layout:
-
-Criação de um container centralizado e limpo para o formulário de cadastro.
-
-Organização dos campos usando CSS Grid/Flexbox para alinhamento fluído.
-
-Componentes e Tipografia:
-
-Estilização de rótulos (labels) destacados e campos de entrada (inputs/selects) aprimorados.
-
-Inclusão de efeitos de foco (focus ring) nos campos e microinterações (hover) nos botões.
-
-Cores e Estilo:
-
-Definição de paleta moderna (fundos suaves, textos de alto contraste, botões com tom primário destacado).
-
-Responsividade:
-
-Adição de regras de mídia (media queries) para adaptar a interface suavemente em telas menores (tablets e smartphones).
-
-
-2º prompt
-Copilot arrume todos os bugs que existem dentro desse projeto, deixe o estilo view/index.js iguais os das demais páginas e não acrescente nada do que não foi o pedido
-
-
-Alterações Implementadas pelo Grupo: Tema claro e escuro 
-
-Prints da Conversa com a IA:
-
-Antes da Reestilização:
-
-Depois da Reestilização:
-
-Link da Aplicação:
-
-Link do Repositório:
-
+**Link do repositório:** [Adicione o link aqui]

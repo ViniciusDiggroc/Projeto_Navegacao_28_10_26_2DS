@@ -92,9 +92,9 @@ Copilot, arrume todos os bugs que existem dentro deste projeto, deixe o estilo d
 
 ## Prints da Conversa com a IA
 
-<img src="./imagem.png" alt="" width="250" style="border-radius: 10px; border: 2px solid #b3d9f2;" >
+<img src="./imagem.png" alt=""  width= "250" style="border-radius: 10px; border: 2px solid #b3d9f2;" >
 <img src="./imagem (1).png" alt="" width="250" style="border-radius: 10px; border: 2px solid #b3d9f2;">
-<img src="./imagem (2).png" alt="" width="250" style="border-radius: 10px; border: 2px solid #b3d9f2;">
+<img src="./imagem (2).png" alt="" width="500" style="border-radius: 10px; border: 2px solid #b3d9f2;">
 
 **Antes da reestilização:**
 
